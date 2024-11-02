@@ -24,6 +24,11 @@
             border-radius: 8px;
             text-align: left;
         }
+        nav a {
+            color: #865c3c;
+            text-decoration: none;
+            margin-right: 15px;
+        }
         pre {
             background-color: #eae4d3;
             padding: 10px;
@@ -41,6 +46,12 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navigation Links -->
+        <nav>
+            <a href="index.html">Introduction</a> |
+            <a href="toc.html">Table of Contents</a>
+        </nav>
+
         <h1>Theory of Normal Distribution</h1>
         <p>The normal distribution is a continuous probability distribution, often used in statistics, that describes data clustering around a mean. Its probability density function is represented as:</p>
         
@@ -54,18 +65,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Generate x values and compute normal distribution y values
+# Generate x values and compute Normal Distribution Y values
 x = np.linspace(-10, 10, 100)
 mu, sigma = 0, 1
 y = (1 / (sigma * np.sqrt(2 * np.pi))) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
 
-# Plot
+# Create a plot of Normal Distribution
 plt.plot(x, y)
 plt.title("Normal Distribution")
 plt.xlabel("x")
 plt.ylabel("Probability Density")
 plt.show()
         </pre>
+
+        <!-- Navigation Links at Bottom -->
+        <nav>
+            <a href="index.html">Introduction</a> |
+            <a href="toc.html">Table of Contents</a>
+        </nav>
     </div>
 
     <script>
