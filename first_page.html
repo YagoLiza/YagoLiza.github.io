@@ -3,30 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас</title>
+    <title>Table of Contents</title>
     <style>
-        nav {
+        /* General book-like styles */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4ecd8; /* Sepia tone background */
+            color: #5e4632; /* Dark brown text color */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: #fdf7e2; /* Light sepia for book pages */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow to give page depth */
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        /* Book-style title */
+        h1 {
+            font-size: 28px;
+            color: #5e4632;
+            border-bottom: 2px solid #a48d7a;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
-            color: #2a9d8f;
+
+        /* Styling the links as a table of contents */
+        nav {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
         }
-        .container {
-            text-align: center;
+        
+        nav a {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #865c3c;
+            text-decoration: none;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        /* Adding page number-like dots */
+        nav a::before {
+            content: "• ";
+            color: #a48d7a;
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+        }
+
+        nav a:hover {
+            color: #5e4632;
+            text-decoration: underline;
+        }
+
+        /* Canvas styling */
+        canvas {
+            border: 1px solid #865c3c;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Main page</a>
-        <a href="first_page.html">Basic Statistics</a>
-        <a href="second_page.html">Math for Data Science</a>
-    </nav>
     <div class="container">
-        <h1>Basic Sctatistic</h1>
-        <p>This page is about Basic Statistics that necessary to know.</p>
+        <h1>Table of Contents</h1>
+        <nav>
+            <a href="index.html">Main page</a>
+            <a href="first_page.html">Basic Statistics</a>
+            <a href="second_page.html">Math for Data Science</a>
+        </nav>
+        
     </div>
 </body>
 </html>
